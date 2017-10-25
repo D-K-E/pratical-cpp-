@@ -41,6 +41,11 @@ std::string input_char; // input char entered by the user
 std::string vowels; // vowels
 std::string consonants; // consonant list
 std::size_t found; // found position of the searched string
+// 8.6
+std::string input_integers; // input integers entered by the user
+char int_char; // section of the input integer string.
+std::string output_str; // output string to be printed in terminal
+// 8.7
 
 
 
@@ -178,5 +183,223 @@ int main()
     }
   }
   // exercise 8.5 ends
+  //
+  std::cout << "Enter a number for converting into letters: ";
+  std::cin >> input_integers;
+  for(int unsigned counter2=0; counter2 < input_integers.length(); ++counter2){
+    int_char = input_integers.at(counter2);
+    // Starting Switch
+    switch (int_char) {
+    case '0':
+      output_str += "zero ";
+      break;
+    case '1':
+      output_str += "one ";
+      break;
+    case '2':
+      output_str += "two ";
+      break;
+    case '3':
+      output_str += "three ";
+      break;
+    case '4':
+      output_str += "four ";
+      break;
+    case '5':
+      output_str += "five ";
+      break;
+    case '6':
+      output_str += "six ";
+      break;
+    case '7':
+      output_str += "seven ";
+      break;
+    case '8':
+      output_str += "eight ";
+      break;
+    case '9':
+      output_str += "nine ";
+      break;
+    }
+  }
+  std::cout << "Here are the numbers in string: " << output_str << "\n";
+  // Exercise 8.6 ends
+  //
+  std::cout << "Enter a number for converting into letters: ";
+  std::cin >> input_integers;
+  output_str = "";
+  if (input_integers.length() > 1){
+    if (input_integers == "11"){
+      output_str = "eleven";
+    }
+    if (input_integers == "12"){
+      output_str = "twelve";
+    }
+    if (input_integers == "13"){
+      output_str = "thirteen";
+    }
+    if (input_integers == "14"){
+      output_str = "fourteen";
+    }
+    if (input_integers == "15"){
+      output_str = "fifteen";
+    }
+    if (input_integers == "16"){
+      output_str = "sixteen";
+    }
+    if (input_integers == "17"){
+      output_str = "seventeen";
+    }
+    if (input_integers == "18"){
+      output_str = "eighteen";
+    }
+    if (input_integers == "19"){
+      output_str = "nineteen";
+    }
+    if (input_integers == "20"){
+      output_str = "twenty";
+    }
+    if (input_integers == "30"){
+      output_str = "thirty";
+    }
+    if (input_integers == "40"){
+      output_str = "fourty";
+    }
+    if (input_integers == "50"){
+      output_str = "fifthy";
+    }
+    if (input_integers == "60"){
+      output_str = "sixty";
+    }
+    if (input_integers == "70"){
+      output_str = "seventy";
+    }
+    if (input_integers == "80"){
+      output_str = "eighty";
+    }
+    if (input_integers == "90"){
+      output_str = "ninety";
+    }
+    if (input_integers == "100"){
+      output_str = "hundered";
+    }
+  }
+
+  for(int unsigned counter2=0; counter2 < input_integers.length(); ++counter2){
+    if (input_integers.length() == 1){
+      int_char = input_integers.at(counter2);
+      // Starting Switch
+      switch (int_char) {
+      case '0':
+        output_str += "zero ";
+        break;
+      case '1':
+        output_str += "one ";
+        break;
+      case '2':
+        output_str += "two ";
+        break;
+      case '3':
+        output_str += "three ";
+        break;
+      case '4':
+        output_str += "four ";
+        break;
+      case '5':
+        output_str += "five ";
+        break;
+      case '6':
+        output_str += "six ";
+        break;
+      case '7':
+        output_str += "seven ";
+        break;
+      case '8':
+        output_str += "eight ";
+        break;
+      case '9':
+        output_str += "nine ";
+        break;
+      }
+    }
+    if ((counter2 == 0)
+        and (input_integers.length() > 1)
+        and (input_integers != "20")
+        and (input_integers != "30")
+        and (input_integers != "40")
+        and (input_integers != "50")
+        and (input_integers != "60")
+        and (input_integers != "70")
+        and (input_integers != "80")
+        and (input_integers != "90")
+        and (input_integers != "100")
+        ){
+      int_char = input_integers.at(counter2);
+      // Starting Switch
+      switch (int_char) {
+      case '2':
+        output_str += "twenty ";
+        break;
+      case '3':
+        output_str += "thirty ";
+        break;
+      case '4':
+        output_str += "fourty ";
+        break;
+      case '5':
+        output_str += "fifthy ";
+        break;
+      case '6':
+        output_str += "sixty ";
+        break;
+      case '7':
+        output_str += "seventy ";
+        break;
+      case '8':
+        output_str += "eighty ";
+        break;
+      case '9':
+        output_str += "ninety ";
+        break;
+      }
+    }
+    else{
+      if (counter2 != 0){
+        int_char = input_integers.at(counter2);
+        // Starting Switch
+        switch (int_char) {
+        case '1':
+          output_str += "one ";
+          break;
+        case '2':
+          output_str += "two ";
+          break;
+        case '3':
+          output_str += "three ";
+          break;
+        case '4':
+          output_str += "four ";
+          break;
+        case '5':
+          output_str += "five ";
+          break;
+        case '6':
+          output_str += "six ";
+          break;
+        case '7':
+          output_str += "seven ";
+          break;
+        case '8':
+          output_str += "eight ";
+          break;
+        case '9':
+          output_str += "nine ";
+          break;
+        }
+      }
+    }
+  }
+  std::cout << "Here are the numbers in string: " << output_str << "\n";
+  // Exercise 8.7 ends
   return(0);
 }
